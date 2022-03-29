@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cool Submitted</title>
+
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="Name" placeholder="Name"/>
+    <br>
+    <input type="text" v-model="Email" placeholder="Email">
+    <br>
+    {{message}}
+    <div v-show="Email.slice(14,20)">Submitted</div>
+    <div v-!show>Not Submitted</div>
+
+    <div v-for="list in lists">
+        <div @click="list.name = list.codename">{{list.name}}</div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
